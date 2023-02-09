@@ -60,11 +60,11 @@ function buildCharts(sample) {
   d3.json("samples.json").then((data) => {
         console.log(data);
 
-        var trace = {
-          type: "bar",
-          x: sample_values,
-          y: otu_ids,
-        }
+        //var trace = {
+        //  type: "bar",
+        //  x: sample_values,
+        //  y: otu_ids,
+        //}
     // Deliverable 1: 3. Create a variable that holds the samples array. 
     var samples = data.samples;
 
@@ -111,7 +111,11 @@ function buildCharts(sample) {
     // Deliverable 1: 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout)
     // Deliverable 2: 1. Create the trace for the bubble chart.
+    var bubbleChart = {
+      x: otu_ids,
+      y; sample_values,
 
+    }
     // Deliverable 2: 2. Create the layout for the bubble chart.
 
     // Deliverable 2: 3. Use Plotly to plot the data with the layout.
