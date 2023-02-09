@@ -113,13 +113,24 @@ function buildCharts(sample) {
     // Deliverable 2: 1. Create the trace for the bubble chart.
     var bubbleChart = {
       x: otu_ids,
-      y; sample_values,
-
+      y: sample_values,
+      type:'bubble',
+      text: otu_labels,
+      marker: {
+        color: otu_ids,
+        colorscale: "Rainbow"
+        size: sample_values
+      }
     }
     // Deliverable 2: 2. Create the layout for the bubble chart.
-
+    var bubbleLayout ={
+      title: 'Belly Button Biodiversity',
+      showlegend: false,
+      height: 800,
+      width: 1000,
+    };
     // Deliverable 2: 3. Use Plotly to plot the data with the layout.
-    
+    Plotly.newPlot("bubble", bubbleChart, bubbleLayout)
     // Deliverable 3: 4. Create the trace for the gauge chart.
     
     // Deliverable 3: 5. Create the layout for the gauge chart.
