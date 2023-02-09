@@ -118,7 +118,7 @@ function buildCharts(sample) {
       text: otu_labels,
       marker: {
         color: otu_ids,
-        colorscale: "Rainbow"
+        colorscale: "Rainbow",
         size: sample_values
       }
     }
